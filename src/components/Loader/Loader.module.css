@@ -1,0 +1,71 @@
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  text-align: center;
+  color: var(--primary-blue);
+  min-height: 400px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.spinner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--light-gray);
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+.spinner::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+  border-top: 4px solid var(--accent-blue);
+  border-right: 4px solid var(--accent-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite reverse;
+}
+
+.loaderContainer::after {
+  content: 'Loading Pokémon...';
+  font-size: 1rem;
+  color: var(--medium-gray);
+  margin-top: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}

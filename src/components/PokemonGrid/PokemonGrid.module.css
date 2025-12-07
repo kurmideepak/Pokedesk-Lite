@@ -1,0 +1,53 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cardWrapper {
+  animation: scaleInStagger 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.noResults {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: var(--medium-gray);
+  min-height: 300px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes scaleInStagger {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .gridContainer {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+}

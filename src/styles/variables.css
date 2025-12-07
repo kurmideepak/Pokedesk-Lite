@@ -1,0 +1,15 @@
+:root {
+  --dark-blue: #0D47A1;
+  --primary-blue: #1976D2;
+  --accent-blue: #42A5F5;
+  --light-background: #F4F8FB;
+  --white: #FFFFFF;
+  --dark-gray: #333333;
+  --medium-gray: #666666;
+  --light-gray: #e0e0e0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --gradient-primary: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%);
+  --gradient-success: linear-gradient(135deg, #7AC74C 0%, #5BA93C 100%);
+  --shadow-hover: 0 12px 32px rgba(25, 118, 210, 0.15);
+}
